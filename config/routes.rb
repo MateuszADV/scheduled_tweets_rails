@@ -3,5 +3,8 @@
 Rails.application.routes.draw do
   get 'about', to: 'about#index'
  
+  get 'sing_up', to: 'registrations#new'
+  post 'sing_up', to: 'registrations#create'
+
   root 'main#index'
 end
