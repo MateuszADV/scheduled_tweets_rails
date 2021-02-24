@@ -8,6 +8,9 @@ def create
     # render plain: params[:user]
     # {"email"=>"mateusz.adv@gmail.com", "password"=>"password", "password_confirmation"=>"password"}
     @user = User.new(user_params)
+    puts "&&&&&&&&&&&&&&&TEST&&&&&&&&&&&&&&&&&&&&&&&"
+    puts user_params
+    puts "&&&&&&&&&&&&&&&END TEST&&&&&&&&&&&&&&&&&&&"
     if @user.save
         session[:user_id] = @user.id
         redirect_to root_path, notice: "Successfull create accont"
