@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
     end
 
     def require_user_logged_in!
-        redirect_to sign_in_path, alert: "Musisz być zalogowany żeby zmienć hasło..." if Current.user.nil?
+        redirect_to sign_in_path, alert: "Musisz być zalogowany" if Current.user.nil?
     end
 end
