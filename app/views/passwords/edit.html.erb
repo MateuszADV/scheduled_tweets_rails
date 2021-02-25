@@ -1,5 +1,5 @@
 <h1> Edit Password </h1>
-
+<h3><%= "Your Email: " + Current.user.email %></h3>
 <%= form_with model: Current.user, url: edit_password_path do |form| %>
 <% if form.object.errors.any? %>
     <div class="alert alert-danger">
