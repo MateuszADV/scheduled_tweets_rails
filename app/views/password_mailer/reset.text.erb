@@ -1,0 +1,6 @@
+Hi <%= params[:user].email %>, 
+Ktoś resetuje twoje hasło
+
+jesli to ty, kliknij link resetu hasła, link jest ważny przez 15 minut.
+
+<%= password_reset_edit_url(token: @token) %>
